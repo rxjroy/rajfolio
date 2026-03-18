@@ -36,6 +36,7 @@ const ChatAssistant: React.FC = () => {
   ]);
   const [inputValue, setInputValue] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const chatRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -44,6 +45,24 @@ const ChatAssistant: React.FC = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (chatRef.current && !chatRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const suggestions = [
     { label: "Skills", query: "What are your skills?" },
@@ -161,7 +180,7 @@ const ChatAssistant: React.FC = () => {
   };
 
   return (
-    <div className="chat-assistant-container">
+    <div className="chat-assistant-container" ref={chatRef}>
       {/* Chat Window */}
       <div className={`chat-window ${isOpen ? "open" : ""}`} data-cursor="disable">
         <div className="chat-header">
