@@ -2,7 +2,7 @@
 
 A premium, interactive personal portfolio showcasing projects and skills as an **AI Engineer** and **Full Stack Developer**.
 
-![Portfolio Screenshot](/images/screenshot.png) <!-- Note: Replace with actual screenshot path if available -->
+
 
 ## 🚀 Key Features
 
