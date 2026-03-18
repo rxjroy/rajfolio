@@ -32,13 +32,6 @@ const projects = [
     image: "/images/diabetes.png",
     github: "https://github.com/rxjroy/diabetes-and-cardio-threat-detector",
   },
-  {
-    title: "Design Folio With Integrated Chat Assistant",
-    category: "Web App",
-    tools: "Html , CSS , JavaScript",
-    image: "/images/designfolio.png",
-    github: "https://github.com/rxjroy/hor1zen-design-folio",
-  },
 ];
 
 const Work = () => {
