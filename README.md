@@ -2,6 +2,8 @@
 
 A premium, interactive personal portfolio showcasing projects and skills as an **AI Engineer** and **Full Stack Developer**.
 
+[**Live Demo**](https://rajfolio.vercel.app)
+
 
 
 ## 🚀 Key Features
@@ -17,8 +19,8 @@ A premium, interactive personal portfolio showcasing projects and skills as an *
 - **Frontend**: React.js, TypeScript, Vite, Tailwind CSS
 - **Animations**: GSAP (GreenSock), ScrollSmoother
 - **3D Graphics**: Three.js, @react-three/fiber, @react-three/drei, Rapier (Physics)
-- **Icons**: React Icons (Fa6, Md, Tb)
-- **Deployment**: Vercel/Netlify
+- **Icons**: React Icons (Fa6, Md, Tb, Si)
+- **Deployment**: Vercel
 
 ## 📂 Project Structure
 
@@ -31,7 +33,7 @@ A premium, interactive personal portfolio showcasing projects and skills as an *
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rxjroy/rajroy-portfolio.git
+   git clone https://github.com/rxjroy/rajfolio.git
    ```
 
 2. Install dependencies:
